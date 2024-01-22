@@ -1,0 +1,452 @@
+{
+	"info": {
+		"_postman_id": "072799de-70ba-4212-9ea4-336ff8a7bca5",
+		"name": "PostMan-CustomerService",
+		"description": "Uma facilidade para você usar os endpoints da API Customer Service via PostMan.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1708442"
+	},
+	"item": [
+		{
+			"name": "Login User Get Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\" : \"giovanni\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Insert",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaW92YW5uaSIsImlzcyI6IkFQSSBVbmltZWQuc2VndXJvcyIsImV4cCI6MTcwNTg5NDM2MX0.LdrBRs7MU1tTF4nzxBdag3NEbHf7y65EehH0yb4TmUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"Capitã América\",\r\n\"email\": \"capita@avengers.com.br\",\r\n\"gender\": \"F\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaW92YW5uaSIsImlzcyI6IkFQSSBVbmltZWQuc2VndXJvcyIsImV4cCI6MTcwNTg5NDM2MX0.LdrBRs7MU1tTF4nzxBdag3NEbHf7y65EehH0yb4TmUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 6,\r\n\"name\": \"Capitão Europa\",\r\n\"email\": \"capitao@a.com.br\",\r\n\"gender\": \"M\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaW92YW5uaSIsImlzcyI6IkFQSSBVbmltZWQuc2VndXJvcyIsImV4cCI6MTcwNTg5NDM2MX0.LdrBRs7MU1tTF4nzxBdag3NEbHf7y65EehH0yb4TmUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Search Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaW92YW5uaSIsImlzcyI6IkFQSSBVbmltZWQuc2VndXJvcyIsImV4cCI6MTcwNTg5NDM2MX0.LdrBRs7MU1tTF4nzxBdag3NEbHf7y65EehH0yb4TmUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Search All",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaW92YW5uaSIsImlzcyI6IkFQSSBVbmltZWQuc2VndXJvcyIsImV4cCI6MTcwNTg5NDM2MX0.LdrBRs7MU1tTF4nzxBdag3NEbHf7y65EehH0yb4TmUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Search by Name Email Gender",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaW92YW5uaSIsImlzcyI6IkFQSSBVbmltZWQuc2VndXJvcyIsImV4cCI6MTcwNTg5NDM2MX0.LdrBRs7MU1tTF4nzxBdag3NEbHf7y65EehH0yb4TmUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"or\",\r\n\"email\": \"or@\",\r\n\"gender\": \"M\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Search Paging",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaW92YW5uaSIsImlzcyI6IkFQSSBVbmltZWQuc2VndXJvcyIsImV4cCI6MTcwNTg5NDM2MX0.LdrBRs7MU1tTF4nzxBdag3NEbHf7y65EehH0yb4TmUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filterCustomers\": {\r\n        \"name\": \"\",\r\n        \"email\": \"\",\r\n        \"gender\": \"\",\r\n        \"uf\" : \"\",\r\n        \"localidade\" : \"\"\r\n    },\r\n    \"customers\": [],\r\n    \"pageNumber\": 0,\r\n    \"sortBy\":\"name\",\r\n    \"pageSize\": 2,\r\n    \"numberOfPages\": 0,\r\n    \"totalRecords\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/search/paging",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"search",
+						"paging"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Insert Address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaW92YW5uaSIsImlzcyI6IkFQSSBVbmltZWQuc2VndXJvcyIsImV4cCI6MTcwNTg5NDM2MX0.LdrBRs7MU1tTF4nzxBdag3NEbHf7y65EehH0yb4TmUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cep\" : \"78300-110\",\r\n    \"customer\" : {\r\n        \"id\" : 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addresses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Update Address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaW92YW5uaSIsImlzcyI6IkFQSSBVbmltZWQuc2VndXJvcyIsImV4cCI6MTcwNTg5NDM2MX0.LdrBRs7MU1tTF4nzxBdag3NEbHf7y65EehH0yb4TmUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"1\",\r\n    \"cep\" : \"78300-112\",\r\n    \"customer\" : {\r\n        \"id\" : 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addresses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Delete Address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaW92YW5uaSIsImlzcyI6IkFQSSBVbmltZWQuc2VndXJvcyIsImV4cCI6MTcwNTg5NDM2MX0.LdrBRs7MU1tTF4nzxBdag3NEbHf7y65EehH0yb4TmUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/addresses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addresses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Customer by UF and Locality",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaW92YW5uaSIsImlzcyI6IkFQSSBVbmltZWQuc2VndXJvcyIsImV4cCI6MTcwNTg5NDM2MX0.LdrBRs7MU1tTF4nzxBdag3NEbHf7y65EehH0yb4TmUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/search/MT/Tangará da Serra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"search",
+						"MT",
+						"Tangará da Serra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Zip Code Address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaW92YW5uaSIsImlzcyI6IkFQSSBVbmltZWQuc2VndXJvcyIsImV4cCI6MTcwNTg5NDM2MX0.LdrBRs7MU1tTF4nzxBdag3NEbHf7y65EehH0yb4TmUI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/addresses/cep/91040000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addresses",
+						"cep",
+						"91040000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
