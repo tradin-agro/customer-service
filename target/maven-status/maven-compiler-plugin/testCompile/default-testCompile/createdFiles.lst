@@ -1,0 +1,10 @@
+com\example\api\web\rest\CustomerControllerIntegrationTest.class
+com\example\api\web\rest\CustomerControllerTest$1.class
+com\example\api\service\CustomerServiceTest$1.class
+com\example\api\service\CustomerServiceTest.class
+com\example\api\service\AddressServiceTest$1.class
+com\example\api\service\AddressServiceTest.class
+com\example\api\service\CustomerServiceTest$2.class
+com\example\api\web\rest\CustomerControllerIntegrationTest$1.class
+com\example\api\web\rest\CustomerControllerTest$2.class
+com\example\api\web\rest\CustomerControllerTest.class

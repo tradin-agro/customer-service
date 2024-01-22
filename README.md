@@ -37,7 +37,7 @@ de autorização.
 no passo anterior para usá-los, no PostMan use a opção "Bearer Token" na aba
 "Authorization" da requisição e informe o TOKEN capturado no passo anterior antes
 de executar a requisição.
-5. Para os PostMan este repositório conta com o arquivo de requisições exportado
+5. Para o PostMan este repositório conta com o arquivo de requisições exportado
 na versão 2.1, está disponível na pasta "resources" do projeto.
 6. Para saber quais os endpoits disponíveis e testar sua execução, foi gerada
 a documentação com Swagger e Spring Doc Open API, que poderá ser acessada em
@@ -47,7 +47,7 @@ TOKEN no endpois "/login" (passo 3) e registrar no Swagger no botão do cadeado
 do lado direito da interface inicial.
 8. Poderá acessar o banco de dados pelo endereço http://localhost:8080/h2-console/ 
 usando User Name: admin e o Password: admin
-9. Esta API ainda não possuí Frontend implementados, logo as interações devem ocorrer
+9. Esta API ainda não possuí Frontend, logo as interações devem ocorrer
 pelos endpoints, usando aplicativos de requisição REST ou pela documentação na
 Swagger UI (passo 6).
 
